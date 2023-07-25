@@ -1,4 +1,6 @@
-
+:root {
+    --theme-main-color: rgb(238, 237, 237);    
+}
 
 @font-face {
     font-family: 'typewriter';
@@ -6,8 +8,9 @@
          url('fonts/moms_typewriter/webfontkit-20230725-033102/mom___-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
+
+
 
 * {
    font: 1em "typewriter";
@@ -17,8 +20,7 @@ header {
     display: flex;
     justify-content: center;
     height: 40px;
-    background: #e3dfdf;
-    ;
+    background: var(--theme-main-color);
 }
 
 footer {
@@ -28,36 +30,44 @@ footer {
     align-items: end;
 }
 
-article {
-    display: flex;  
+
+#imageContainer {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
 }
 
 img {
     width: 600px;
-    height: 650px ;    
+    height: 650px; 
+    grid-area: "img";   
 }
 
 .main-container {
-    background: #eae6e6;
-    display: flex;
-    flex-direction: row;
+    background: var(--theme-main-color);
+    display: grid;
+    grid-template-columns: minmax(150px,30%) auto minmax(150px,30%);
     justify-content: center;
 }
 
-.spacer {
-    width: 100px;
-
+.spacer { 
+    background: rgb(238, 237, 237);
 }
 
 .bottom-spacer {
     height: 20vh;
+    background: var(--theme-main-color);
 }
 
 .child {
-    width: 150px;
-    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 80px;
     padding: 10px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+
 }
 
 .parent {
@@ -66,6 +76,47 @@ img {
     left: calc(50% - 253px);
 }
 
-#child2 {
-    justify-self: right;
+.child-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows:  1fr 1fr 1fr 1fr 1fr 1fr;
 }
+
+#child1 {
+}
+
+#child2 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+#child3 {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+#child4 {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 4;
+    grid-column-end: 5;
+} 
+
+#child5 {
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column-start: 5;
+    grid-column-end: 6;
+} 
+
+#child6 {
+    grid-row-start: 6;
+    grid-row-end: 7;
+    grid-column-start: 6;
+    grid-column-end: 7;
+} 
+
