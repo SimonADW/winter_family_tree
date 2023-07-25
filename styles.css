@@ -12,3 +12,18 @@
 * {
    font: 1em "typewriter";
 }
+
+header {
+    height: 40px;
+    background: #e3dfdf;:;
+}
+img {
+    width: 30%;
+    height: auto;
+    
+}
+
+body {
+    /* display: flex;
+    flex-direction: row; */
+}
