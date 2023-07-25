@@ -1,0 +1,14 @@
+
+
+@font-face {
+    font-family: 'typewriter';
+    src: url('fonts/moms_typewriter/webfontkit-20230725-033102/mom___-webfont.woff2') format('woff2'),
+         url('fonts/moms_typewriter/webfontkit-20230725-033102/mom___-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {
+   font: 1em "typewriter";
+}
