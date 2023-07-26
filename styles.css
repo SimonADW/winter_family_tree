@@ -1,5 +1,6 @@
 :root {
-    --theme-main-color: rgb(238, 237, 237);    
+    --theme-main-color: rgb(238, 237, 237);  
+    --theme-secondary-color: #eae5d5; 
     --footer-header-height: 60px;
 }
 
@@ -61,6 +62,53 @@ img {
     background: var(--theme-main-color);
 }
 
+
+.box {
+    border-radius: 3px;
+    padding: 2px;
+    background-color: #eaab00; /* gold */
+    /* Single pixel data uri image http://jsfiddle.net/LPxrT/ 
+    /* background-image: gold, gold, white */
+    background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAOqrAP///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='),  url('data:image/gif;base64,R0lGODlhAQABAPAAAOqrAP///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='),
+    url('data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==');
+    background-repeat: no-repeat;
+    background-size: 0 2px, 0 100%, 0% 2px;
+    background-position: top center, top center, bottom center;
+    -webkit-animation: drawBorderFromCenter 4s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes drawBorderFromCenter {
+    0% {
+        background-size: 0 2px, 0 0, 100% 100%;
+    }
+    20% {
+        background-size: 100% 2px, 100% 0, 100% 100%;
+    }
+    66%
+    {
+        background-size: 100% 2px, 100% 98%, 100% 100%;
+    }
+    99%
+    {
+        background-size: 100% 2px, 100% 98%, 0 2px;
+    }
+    
+}
+
+.parent {
+    position: absolute;
+    top: 690px;
+    left: calc(50% - 240px);
+}
+
+.child-container {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows:  1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
 .child {
     display: flex;
     justify-content: center;
@@ -72,97 +120,54 @@ img {
     /* border: 1px solid black; */
 }
 
-.box {
+.child:hover {
+    background: var(--theme-secondary-color);
     border-radius: 3px;
 }
 
-.box:hover {
-  padding: 2px;
-  background-color: #eaab00; /* gold */
-  /* Single pixel data uri image http://jsfiddle.net/LPxrT/ 
-  /* background-image: gold, gold, white */
-  background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAOqrAP///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='),  url('data:image/gif;base64,R0lGODlhAQABAPAAAOqrAP///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='),
-    url('data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==');
-  background-repeat: no-repeat;
-  background-size: 0 2px, 0 100%, 0% 2px;
-  background-position: top center, top center, bottom center;
-  -webkit-animation: drawBorderFromCenter 4s;
-}
-
-/* Chrome, Safari, Opera */
-@-webkit-keyframes drawBorderFromCenter {
-    0% {
-      background-size: 0 2px, 0 0, 100% 100%;
-    }
-    20% {
-      background-size: 100% 2px, 100% 0, 100% 100%;
-    }
-    66%
-    {
-      background-size: 100% 2px, 100% 98%, 100% 100%;
-    }
-    99%
-    {
-      background-size: 100% 2px, 100% 98%, 0 2px;
-    }
-
-    
-}
-
-.box {
-    background: white;
-    padding: .2em;
-    text-align: center;
-}
-
-.parent {
-    position: absolute;
-    top: 690px;
-    left: calc(50% - 240px);
-}
-
-.child-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
-    grid-template-rows:  1fr 1fr 1fr 1fr 1fr 1fr;
-}
-
 #child1 {
+    margin-top: 0;
   
 }
 
 #child2 {
-    grid-row-start: 2;
+    margin-top: 15px;
+    /* grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 2;
-    grid-column-end: 3;
+    grid-column-end: 3; */
 }
 
+
 #child3 {
-    grid-row-start: 3;
+    margin-top: 30px;
+    /* grid-row-start: 3;
     grid-row-end: 4;
     grid-column-start: 3;
-    grid-column-end: 4;
+    grid-column-end: 4; */
 }
 
 #child4 {
-    grid-row-start: 4;
+    margin-top: 45px;
+    /* grid-row-start: 4;
     grid-row-end: 5;
     grid-column-start: 4;
-    grid-column-end: 5;
+    grid-column-end: 5; */
 } 
 
 #child5 {
-    grid-row-start: 5;
+    margin-top: 60px;;
+    /* grid-row-start: 5;
     grid-row-end: 6;
     grid-column-start: 5;
-    grid-column-end: 6;
+    grid-column-end: 6; */
 } 
 
 #child6 {
-    grid-row-start: 6;
+    margin-top: 75px;
+    /* grid-row-start: 6;
     grid-row-end: 7;
     grid-column-start: 6;
-    grid-column-end: 7;
+    grid-column-end: 7; */
 } 
 
