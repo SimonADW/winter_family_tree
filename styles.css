@@ -40,7 +40,7 @@ footer {
     border-radius: 3px;
 }
 
-img {
+img#crest {
     width: 600px;
     height: 650px; 
     grid-area: "img";   
@@ -105,8 +105,8 @@ img {
 .child-container {
     display: grid;
     place-items: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
-    grid-template-rows:  1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(6, 1fr); 
+    grid-template-rows:  repeat(6, 1fr);
 }
 
 .child {
@@ -171,3 +171,41 @@ img {
     grid-column-end: 7; */
 } 
 
+/* Sketching for DOM-manipulation  */
+
+#parent1 {
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+
+#parent2 {
+    grid-row: 2/3;
+    grid-column: 5/6;
+
+}
+
+#grandchild1 {
+    grid-row: 2/3;
+    grid-column: 3/4;
+    padding-top: 40%;
+    
+}
+
+#grandchild2 {
+    grid-row: 2/3;
+    grid-column: 4/5;
+    padding-top: 40%;
+}
+
+
+#Familyphoto {
+    grid-row: 3/5;
+    grid-column: 2/6;
+    width: 500px;
+    height: auto;
+    /* border: 1px solid black;  */
+    border-radius: 5px;
+   
+    
+
+}
