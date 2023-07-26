@@ -173,6 +173,10 @@ img#crest {
 
 /* Sketching for DOM-manipulation  */
 
+.familymembers {
+    visibility: visible;
+}
+
 #parent1 {
     grid-row: 2/3;
     grid-column: 2/3;
@@ -205,6 +209,7 @@ img#crest {
     height: auto;
     /* border: 1px solid black;  */
     border-radius: 5px;
+    visibility: hidden ;
    
     
 
