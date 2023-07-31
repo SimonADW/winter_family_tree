@@ -21,15 +21,17 @@
 header {
     display: flex;
     justify-content: center;
+    align-items: center;
     height: var(--footer-header-height);
-    background: var(--theme-main-color);
+    background: var(--theme-secondary-color);
 }
 
 footer {
     height: var(--footer-header-height);
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: center;
+    background: var(--theme-secondary-color);
 }
 
 
@@ -51,6 +53,7 @@ img#crest {
     display: grid;
     grid-template-columns: minmax(150px,30%) auto minmax(150px,30%);
     justify-content: center;
+    padding-top: 20px;
 }
 
 .center-container {
@@ -67,6 +70,7 @@ img#crest {
 }
 
 
+/* "Frame animation" */
 .box {
     max-width: fit-content;
     border-radius: 3px;
@@ -103,7 +107,7 @@ img#crest {
 
 .parent {
     position: absolute;
-    top: 690px;
+    top: 710px;
     left: calc(50% - 240px);
 }
 
@@ -193,10 +197,22 @@ img#crest {
     /* border: 1px solid black;  */
     border-radius: 5px;
     visibility: hidden; 
+
+     
 }
 
 #familyphoto-container {
     display: flex;
     justify-content:center ;
-    width: 100%;
+    width: 100%; 
 }
+
+.fadeIn {
+    animation: fadeIn ease 3s;
+    -webkit-animation: fadeIn ease 3s;
+}
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
