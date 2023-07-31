@@ -197,7 +197,7 @@ img#crest {
     border-radius: 5px;
     visibility: hidden; 
     
-    border: 1px solid black;      
+    /* border: 1px solid black;       */
 }
 
 #familyphoto-container {    
@@ -206,6 +206,11 @@ img#crest {
     justify-content:center ;
     width: 100%; 
     height: fit-content;
+    
+}
+
+#familyphoto-container img {
+    z-index: 1;
 }
 
 #familyphoto-container img:nth-child(2) {
@@ -216,23 +221,35 @@ img#crest {
     width: 300px;   
     height: 300px;
     object-fit: cover;
+    z-index: 2;
 }
 
 #familyphoto-container img:nth-child(3) {
     position: absolute;
-    top: 70px;
+    top: 65px;
     right: 60px;
 
     width: 300px;   
     height: 300px;
     object-fit: cover;
+    z-index: 0;
 }
 
 
 
 .fadeIn {
-    animation: fadeIn ease 3s;
-    -webkit-animation: fadeIn ease 3s;
+    animation: fadeIn ease 1500ms;
+    -webkit-animation: fadeIn ease 1500ms;
+}
+
+.fadeInSec {
+    animation: fadeIn ease 2500ms;
+    -webkit-animation: fadeIn ease 2500ms;
+}
+
+.fadeInThird {
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
 }
 
 @keyframes fadeIn {
