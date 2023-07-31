@@ -58,6 +58,7 @@ img#crest {
 
 .center-container {
     max-width: 1200px;
+    
 }
 
 .spacer { 
@@ -161,7 +162,6 @@ img#crest {
 /* Grids for DOM-manipulation  */
 
 .familymembers {
-    /* visibility: hidden; */
     text-align: center;
 }
 
@@ -190,22 +190,45 @@ img#crest {
 }
 
 
-#Familyphoto {
+#Familyphoto, #Familyphoto2, #Familyphoto3 {
     width: 500px;
     height: auto;
     margin-top: 20px;
-    /* border: 1px solid black;  */
     border-radius: 5px;
     visibility: hidden; 
-
-     
+    
+    border: 1px solid black;      
 }
 
-#familyphoto-container {
+#familyphoto-container {    
+    position: relative;
     display: flex;
     justify-content:center ;
     width: 100%; 
+    height: fit-content;
 }
+
+#familyphoto-container img:nth-child(2) {
+    position: absolute;
+    top: 10px;
+    left: 70px;
+
+    width: 300px;   
+    height: 300px;
+    object-fit: cover;
+}
+
+#familyphoto-container img:nth-child(3) {
+    position: absolute;
+    top: 70px;
+    right: 60px;
+
+    width: 300px;   
+    height: 300px;
+    object-fit: cover;
+}
+
+
 
 .fadeIn {
     animation: fadeIn ease 3s;
