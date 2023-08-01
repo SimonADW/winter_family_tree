@@ -24,6 +24,21 @@ header {
     align-items: center;
     height: var(--footer-header-height);
     background: var(--theme-secondary-color);
+    position: relative;
+}
+
+/* menu apperance */
+#menu {
+    position: absolute;
+    object-position: center;
+    left: 15px;
+    width: 35px;
+    border-radius: 3px;
+}
+
+#menu:hover {
+    background: var(--theme-main-color);
+    width: 40px;
 }
 
 footer {
