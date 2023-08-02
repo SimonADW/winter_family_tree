@@ -28,7 +28,6 @@ header {
     align-items: center;
     height: var(--footer-header-height);
     background: var(--theme-secondary-color);
-   
 }
 
 /* menu apperance */
@@ -168,6 +167,7 @@ img#crest {
     position: absolute;
     top: 710px;
     left: calc(50% - 240px);
+    z-index: 1;
 }
 
 .child-container {
@@ -247,6 +247,7 @@ img#crest {
     padding-top: 40%;
 }
 
+/* grid end */
 
 #Familyphoto, #Familyphoto2, #Familyphoto3 {
     width: 500px;
@@ -254,8 +255,7 @@ img#crest {
     margin-top: 20px;
     border-radius: 5px;
     visibility: hidden; 
-    
-    /* border: 1px solid black;       */
+       
 }
 
 #familyphoto-container {    
@@ -269,6 +269,10 @@ img#crest {
 
 #familyphoto-container img {
     z-index: 1;
+}
+
+#familyphoto-container img:nth-child(1) {
+filter: grayscale(100%);
 }
 
 #familyphoto-container img:nth-child(2) {
