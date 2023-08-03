@@ -98,11 +98,23 @@ footer {
     border-radius: 3px;
 }
 
-img#crest {
+.crest {
     width: 600px;
     height: 650px; 
-    grid-area: "img";   
 }
+#doderlein-crest-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--theme-main-color);
+    
+}
+
+#crest-doderlein {
+   width: 550px;
+   height: 550px;
+}
+
 
 .main-container {
     background: var(--theme-main-color);
