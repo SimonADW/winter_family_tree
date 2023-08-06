@@ -98,6 +98,7 @@ footer {
     flex-direction: row;
     margin-bottom: 10px;
     border-radius: 3px;
+    
 }
 
 .crest {
@@ -157,6 +158,7 @@ footer {
     background-size: 0 2px, 0 100%, 0% 2px;
     background-position: top center, top center, bottom center;
     -webkit-animation: drawBorderFromCenter 4s;
+    
 }
 
 /* Chrome, Safari, Opera */
@@ -200,6 +202,7 @@ footer {
     height: 80px;
     padding: 10px;
     text-align: center;
+    margin-top: 70px;
    
 }
 
@@ -208,29 +211,6 @@ footer {
     border-radius: 3px;
 }
 
-#child1 {
-    margin-top: 0;
-}
-
-#child2 {
-    margin-top: 15px;
-}
-
-#child3 {
-    margin-top: 30px;
-}
-
-#child4 {
-    margin-top: 45px;
-} 
-
-#child5 {
-    margin-top: 60px;;
-} 
-
-#child6 {
-    margin-top: 75px;
-} 
 
 /* Grids for DOM-manipulation  */
 
@@ -270,7 +250,11 @@ footer {
     margin-top: 20px;
     border-radius: 5px;
     visibility: hidden; 
-       
+    
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);;
+    
 }
 
 #familyphoto-container {    
